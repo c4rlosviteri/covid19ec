@@ -4,7 +4,6 @@ import { ThemeProvider, createGlobalStyle } from "styled-components";
 
 import { StateProvider } from "../state-context";
 import { initialState, reducer } from "../state-context/reducer";
-import { DESKTOP } from "../utils/breakpoints";
 
 export const theme = {
   colors: {
