@@ -57,6 +57,10 @@ const GlobalStyle = createGlobalStyle`
   button:hover {
     cursor: pointer;
   }
+
+  svg {
+    font-family: "Proxima Nova" !important;
+  }
 `;
 
 export default class MyApp extends App {

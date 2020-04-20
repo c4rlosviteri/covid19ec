@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import createData from "../fetch/create-data";
 import Drawer from "../components/drawer";
-import Head from "../components/head";
+import DrawerStats from "../components/drawer-stats";
 import Header from "../components/header";
 import MapGeoJson from "../components/map-geojson";
 import stop from "../utils/stop";
@@ -64,7 +64,6 @@ function Index({ ecuador, world }) {
 
   return (
     <>
-      <Head />
       <Header lastUpdate={data.ecuador.lastUpdate} />
       <Container>
         <Drawer data={data} />
@@ -74,6 +73,7 @@ function Index({ ecuador, world }) {
           provinces={data.ecuador.provinces}
           provincesKeys={data.ecuador.provincesKey}
         />
+        <DrawerStats data={data} />
       </Container>
     </>
   );
