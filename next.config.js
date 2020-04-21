@@ -8,8 +8,9 @@ module.exports = withFonts(
       airtableApikey: process.env.AIRTABLE_APIKEY,
     },
     publicRuntimeConfig: {
+      googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID,
       mapboxToken: process.env.MAPBOX_TOKEN,
       mapStyle: process.env.MAP_STYLE,
-    }
+    },
   })
 );

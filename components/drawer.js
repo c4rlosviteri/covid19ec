@@ -96,7 +96,7 @@ const TableContainer = styled.section`
     }
 
     > div:first-of-type {
-      max-width: calc(100% - 12rem);
+      max-width: calc(100% - 11.75rem);
     }
   }
 `;

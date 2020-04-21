@@ -8,10 +8,11 @@ import styled from "styled-components";
 import { useGlobalState } from "../state-context";
 import { theme } from "../pages/_app";
 
-const transparentBackground = {
+const chartStyle = {
   chart: {
     backgroundColor: "transparent",
     spacing: [0, 0, 0, 0],
+    height: 428,
   },
 };
 
@@ -49,7 +50,7 @@ function Charts({
       Highcharts.chart(divAgeGroup.current, {
         chart: {
           type: "column",
-          ...transparentBackground.chart,
+          ...chartStyle.chart,
         },
         title: {
           text: t("casesByAge"),
@@ -110,7 +111,7 @@ function Charts({
 
     if (divSexCases.current) {
       Highcharts.chart(divSexCases.current, {
-        ...transparentBackground,
+        ...chartStyle,
         title: {
           text: t("casesBySex"),
         },
@@ -160,7 +161,7 @@ function Charts({
 
     if (divTimelineCases.current) {
       Highcharts.chart(divTimelineCases.current, {
-        ...transparentBackground,
+        ...chartStyle,
         title: {
           text: t("timeline"),
         },
@@ -224,7 +225,7 @@ function Charts({
 
     if (divPatientsState.current) {
       Highcharts.chart(divPatientsState.current, {
-        ...transparentBackground,
+        ...chartStyle,
         title: {
           text: t("patientsState"),
         },
@@ -272,7 +273,7 @@ function Charts({
       Highcharts.chart(divDailyCases.current, {
         chart: {
           type: "area",
-          ...transparentBackground.chart,
+          ...chartStyle.chart,
         },
         title: {
           text: t("dailyCases"),
