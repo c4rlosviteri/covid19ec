@@ -1,6 +1,7 @@
 import React from "react";
 
 import image from "../assets/ogimage.png";
+import icon from "../assets/favicon.ico";
 
 function AppHead() {
   const title = "Covid-19 Ecuador";
@@ -9,6 +10,7 @@ function AppHead() {
 
   return (
     <>
+      <link rel="icon" href={icon} />
       <meta name="description" content={description} />
       <meta name="og:title" content={title} />
       <meta name="og:description" content={description} />
