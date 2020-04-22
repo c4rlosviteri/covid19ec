@@ -7,6 +7,7 @@ i18n.use(initReactI18next).init({
       translation: {
         confirmed: "Confirmed",
         deaths: "Deaths",
+        possibleDeaths: "Possible deaths",
         recovered: "Recovered",
         labSamples: "Lab samples",
         searchProvinces: "Search provinces",
@@ -39,6 +40,7 @@ i18n.use(initReactI18next).init({
       translation: {
         confirmed: "Confirmados",
         deaths: "Fallecidos",
+        possibleDeaths: "Muertes probables",
         recovered: "Recuperados",
         labSamples: "Muestras",
         searchProvinces: "Buscar provincias",

@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { rgba } from "polished";
 import {
   FaBiohazard,
+  FaBookDead,
   FaSkullCrossbones,
   FaNotesMedical,
   FaVial,
@@ -186,7 +187,9 @@ function Table({ data }) {
 
 function Drawer({ data }) {
   const [{ selectedDataset }] = useGlobalState();
-  const { confirmed, deaths, labSamples, recovered } = data[selectedDataset];
+  const { confirmed, deaths, labSamples, recovered, possibleDeaths } = data[
+    selectedDataset
+  ];
   const { t } = useTranslation();
 
   return (
@@ -211,11 +214,18 @@ function Drawer({ data }) {
           value={recovered}
         />
         {selectedDataset === "ecuador" && (
-          <StatsBlock
-            icon={<FaVial aria-hidden="true" />}
-            label={t("labSamples")}
-            value={labSamples}
-          />
+          <>
+            <StatsBlock
+              icon={<FaBookDead aria-hidden="true" />}
+              label={t("possibleDeaths")}
+              value={possibleDeaths}
+            />
+            <StatsBlock
+              icon={<FaVial aria-hidden="true" />}
+              label={t("labSamples")}
+              value={labSamples}
+            />
+          </>
         )}
       </section>
       <Separator />

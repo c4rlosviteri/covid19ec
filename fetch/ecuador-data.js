@@ -22,6 +22,7 @@ const createEcuadorData = async (data) => {
     labSamples: stats.lab_samples,
     recovered: stats.recovered,
     lastUpdate: stats.last_update,
+    possibleDeaths: stats.possible_deaths,
   });
 };
 
