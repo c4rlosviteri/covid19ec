@@ -216,6 +216,13 @@ function Charts({
             })),
             name: t("recovered"),
           },
+          {
+            data: sortedTimeline.map((time) => ({
+              y: time.possibleDeaths,
+              date: time.date,
+            })),
+            name: t("possibleDeaths"),
+          },
         ],
         credits: {
           enabled: false,
