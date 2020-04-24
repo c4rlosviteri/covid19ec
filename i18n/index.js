@@ -33,7 +33,7 @@ i18n.use(initReactI18next).init({
         inICU: "Intensive Care Unit",
         inHospital: "In hospital",
         atHome: "At home",
-        dailyCases: "Daily cases",
+        dailyCases: "Daily cases by<br/>onset of symptoms",
       },
     },
     es: {
@@ -66,7 +66,7 @@ i18n.use(initReactI18next).init({
         inICU: "Pronóstico reservado",
         inHospital: "Hospitalizados",
         atHome: "Estables en casa",
-        dailyCases: "Casos diarios",
+        dailyCases: "Casos diarios por<br/>inicio de síntomas",
       },
     },
   },

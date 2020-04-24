@@ -30,6 +30,7 @@ function Charts({
       casesBySex,
       patientsState,
       ageGroup,
+      patientSymptoms,
     },
   },
 }) {
@@ -43,6 +44,9 @@ function Charts({
 
   useEffect(() => {
     const sortedTimeline = timeline.sort(
+      (a, b) => parseISO(a.date) - parseISO(b.date)
+    );
+    const sortedPatientSymptoms = patientSymptoms.sort(
       (a, b) => parseISO(a.date) - parseISO(b.date)
     );
 
@@ -287,7 +291,7 @@ function Charts({
         },
         xAxis: {
           tickInterval: 1,
-          categories: sortedTimeline.map(({ date }) =>
+          categories: sortedPatientSymptoms.map(({ date }) =>
             format(parseISO(date), "MM-dd")
           ),
         },
@@ -316,13 +320,7 @@ function Charts({
         series: [
           {
             name: t("dailyCases"),
-            data: sortedTimeline.map(({ confirmed, date }, index, array) => ({
-              date,
-              y:
-                index === 0
-                  ? confirmed
-                  : confirmed - array[index - 1].confirmed,
-            })),
+            data: sortedPatientSymptoms.map((record) => record.count),
           },
         ],
         credits: {
