@@ -79,23 +79,12 @@ function createLineDataLayer(isProvinceActive) {
   return {
     ...line,
     paint: {
-      "line-color": {
-        property: "stop",
+      "line-color": "#5f6769",
+      "line-opacity": {
+        property: "hovered",
         stops: [
-          // provinces
-          [0, isProvinceActive ? "#a0aec0" : "#e53e3e"],
-          [1, isProvinceActive ? "#a0aec0" : "#e53e3e"],
-          [2, isProvinceActive ? "#a0aec0" : "#e53e3e"],
-          [3, isProvinceActive ? "#a0aec0" : "#e53e3e"],
-          [4, isProvinceActive ? "#a0aec0" : "#e53e3e"],
-          [5, isProvinceActive ? "#a0aec0" : "#e53e3e"],
-          // cities
-          [10, "#e53e3e"],
-          [11, "#e53e3e"],
-          [12, "#e53e3e"],
-          [13, "#e53e3e"],
-          [14, "#e53e3e"],
-          [15, "#e53e3e"],
+          [0, 0.2],
+          [1, 1],
         ],
       },
     },
