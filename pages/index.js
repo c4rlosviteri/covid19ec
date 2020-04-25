@@ -92,7 +92,7 @@ function Index({ ecuador, world }) {
           imageSource={Logo}
           daysToLive={0}
           secondsBeforeBannerShows={1}
-          closeIconSize={5}
+          closeIconSize={15}
         />
       </Container>
     </>
