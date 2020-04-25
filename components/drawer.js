@@ -73,15 +73,15 @@ export const Separator = styled.hr`
 const TableContainer = styled.section`
   background-color: ${({ theme }) => theme.colors.white};
   border-radius: 0.5rem;
-  overflow: hidden;
 
-  > div {
-    overflow-x: hidden;
-  }
-
-  header > div {
+  > div > header > div {
     font-weight: bold;
     text-transform: uppercase;
+  }
+
+  > div > header,
+  > div > div {
+    display: block;
   }
 
   [role="button"] {
@@ -90,14 +90,14 @@ const TableContainer = styled.section`
   }
 
   [role="row"] {
+    > div:first-of-type {
+      max-width: calc(100% - 8.375rem);
+    }
+
     > div:not(:first-of-type) {
       flex-grow: 0;
       min-width: 4rem;
       padding-left: 0;
-    }
-
-    > div:first-of-type {
-      max-width: calc(100% - 11.75rem);
     }
   }
 `;
