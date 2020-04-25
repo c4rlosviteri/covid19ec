@@ -75,6 +75,15 @@ function Index({ ecuador, world }) {
 
   return (
     <>
+      <Announcement
+        title="Actualización de datos"
+        subtitle="De acuerdo al ministerio de salud, el nuevo informe de casos se dará el día lunes"
+        link="https://twitter.com/Salud_Ec/status/1253852178852335616?s=20"
+        imageSource={Logo}
+        daysToLive={1}
+        secondsBeforeBannerShows={1}
+        closeIconSize={15}
+      />
       <Header lastUpdate={data.ecuador.lastUpdate} />
       <Container>
         <Drawer data={data} />
@@ -85,15 +94,6 @@ function Index({ ecuador, world }) {
           provincesKeys={data.ecuador.provincesKey}
         />
         <DrawerStats data={data} />
-        <Announcement
-          title="Actualización de datos"
-          subtitle="De acuerdo al ministerio de salud, el nuevo informe de casos se dará el día lunes"
-          link="https://twitter.com/Salud_Ec/status/1253852178852335616?s=20"
-          imageSource={Logo}
-          daysToLive={0}
-          secondsBeforeBannerShows={1}
-          closeIconSize={15}
-        />
       </Container>
     </>
   );
