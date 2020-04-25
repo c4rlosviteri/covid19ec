@@ -1,10 +1,12 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
 
+import Announcement from "react-announcement";
 import createData from "../fetch/create-data";
 import Drawer from "../components/drawer";
 import DrawerStats from "../components/drawer-stats";
 import Header from "../components/header";
+import Logo from "../assets/info-circle.svg";
 import MapGeoJson from "../components/map-geojson";
 import stop from "../utils/stop";
 import { DESKTOP } from "../utils/breakpoints";
@@ -83,6 +85,15 @@ function Index({ ecuador, world }) {
           provincesKeys={data.ecuador.provincesKey}
         />
         <DrawerStats data={data} />
+        <Announcement
+          title="Actualización de datos"
+          subtitle="De acuerdo al ministerio de salud, el nuevo informe de casos se dará el día lunes"
+          link="https://twitter.com/Salud_Ec/status/1253852178852335616?s=20"
+          imageSource={Logo}
+          daysToLive={0}
+          secondsBeforeBannerShows={1}
+          closeIconSize={5}
+        />
       </Container>
     </>
   );

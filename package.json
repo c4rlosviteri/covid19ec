@@ -35,6 +35,7 @@
     "next-images": "^1.4.0",
     "polished": "^3.5.1",
     "react": "^16.8.0",
+    "react-announcement": "^1.1.2",
     "react-data-table-component": "^6.7.1",
     "react-dom": "^16.8.0",
     "react-ga": "^2.7.0",
