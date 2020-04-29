@@ -77,8 +77,8 @@ function Index({ ecuador, world }) {
     <>
       <Announcement
         title="Actualización de datos"
-        subtitle="De acuerdo al ministerio de salud, el nuevo informe de casos se dará el día lunes"
-        link="https://twitter.com/Salud_Ec/status/1253852178852335616?s=20"
+        subtitle="Debido a que no se proporciona datos por cantones, no se ha actualizado esta página"
+        link="https://twitter.com/Salud_Ec/status/1255168797234933763?s=20"
         imageSource={Logo}
         daysToLive={1}
         secondsBeforeBannerShows={1}
