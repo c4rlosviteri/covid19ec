@@ -77,7 +77,7 @@ function Index({ ecuador, world }) {
     <>
       <Announcement
         title="Actualización de datos"
-        subtitle="Debido a que no se proporciona datos por cantones, no se ha actualizado esta página"
+        subtitle="Los datos mostrados únicamente responden a las prueba PCR, no se toman en cuenta pruebas rápidas"
         link="https://twitter.com/Salud_Ec/status/1255168797234933763?s=20"
         imageSource={Logo}
         daysToLive={1}
