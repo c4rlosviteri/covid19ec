@@ -39,12 +39,11 @@ export async function getInitialData() {
     do {
       const { records, offset } = await getEcuadorCities(newOffset);
       newOffset = offset;
-      yield records.map(record => record.fields);
+      yield records.map((record) => record.fields);
     } while (newOffset);
   }
 
   try {
-
     for await (const cities of generateEcuadorCities()) {
       ecuadorCities.push(...cities);
     }
@@ -78,6 +77,7 @@ export async function getInitialData() {
       deaths: ecuadorData.deaths,
       labSamples: ecuadorData.lab_samples,
       recovered: ecuadorData.recovered,
+      hospitalDischarge: stats.hospital_discharge,
       lastUpdate: ecuadorData.last_update,
     },
     world: {

@@ -7,6 +7,7 @@ import {
   FaSkullCrossbones,
   FaNotesMedical,
   FaVial,
+  FaHandHoldingHeart,
 } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 import DataTable from "react-data-table-component";
@@ -187,9 +188,14 @@ function Table({ data }) {
 
 function Drawer({ data }) {
   const [{ selectedDataset }] = useGlobalState();
-  const { confirmed, deaths, labSamples, recovered, possibleDeaths } = data[
-    selectedDataset
-  ];
+  const {
+    confirmed,
+    deaths,
+    labSamples,
+    recovered,
+    possibleDeaths,
+    hospitalDischarge,
+  } = data[selectedDataset];
   const { t } = useTranslation();
 
   return (
@@ -215,6 +221,11 @@ function Drawer({ data }) {
         />
         {selectedDataset === "ecuador" && (
           <>
+            <StatsBlock
+              icon={<FaHandHoldingHeart aria-hidden="true" />}
+              label={t("hospitalDischarge")}
+              value={hospitalDischarge}
+            />
             <StatsBlock
               icon={<FaBookDead aria-hidden="true" />}
               label={t("possibleDeaths")}
