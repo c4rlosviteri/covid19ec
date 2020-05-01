@@ -8,7 +8,7 @@ i18n.use(initReactI18next).init({
         confirmed: "Confirmed",
         deaths: "Deaths",
         possibleDeaths: "Possible deaths",
-        recovered: "Recovered",
+        recovered: "Healed",
         hospitalDischarge: "Hospital Discharge",
         labSamples: "Lab samples",
         searchProvinces: "Search provinces",
