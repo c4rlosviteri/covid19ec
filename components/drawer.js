@@ -194,7 +194,7 @@ function Drawer({ data }) {
     labSamples,
     recovered,
     possibleDeaths,
-    hospitalDischarge,
+    epidemiologyDischarge,
   } = data[selectedDataset];
   const { t } = useTranslation();
 
@@ -223,8 +223,8 @@ function Drawer({ data }) {
           <>
             <StatsBlock
               icon={<FaHandHoldingHeart aria-hidden="true" />}
-              label={t("hospitalDischarge")}
-              value={hospitalDischarge}
+              label={t("epidemiologyDischarge")}
+              value={epidemiologyDischarge}
             />
             <StatsBlock
               icon={<FaBookDead aria-hidden="true" />}

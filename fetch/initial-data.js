@@ -77,7 +77,7 @@ export async function getInitialData() {
       deaths: ecuadorData.deaths,
       labSamples: ecuadorData.lab_samples,
       recovered: ecuadorData.recovered,
-      hospitalDischarge: stats.hospital_discharge,
+      epidemiologyDischarge: stats.epidemiology_discharge,
       lastUpdate: ecuadorData.last_update,
     },
     world: {
