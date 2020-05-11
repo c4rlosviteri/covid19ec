@@ -77,8 +77,8 @@ function Index({ ecuador, world }) {
     <>
       <Announcement
         title="Actualización de datos"
-        subtitle="Los datos mostrados únicamente responden a las pruebas PCR, no se toman en cuenta pruebas rápidas"
-        link="https://twitter.com/Salud_Ec/status/1255168797234933763?s=20"
+        subtitle="Esta página dejará de actualizarse debido a la inconsistencia de datos por parte de las autoridades"
+        link="https://public.tableau.com/profile/publicaciones.dneais.msp#!/vizhome/COVID19ecu_MSP_15866333883550/COVID-19MSP"
         imageSource={Logo}
         daysToLive={1}
         secondsBeforeBannerShows={1}
